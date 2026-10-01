@@ -62,22 +62,6 @@ flowchart LR
 - **Discovery questions first:** customers rarely use the exact product name; most examples are of the type "what do you have for less than X", with synonyms and budgets written in different ways (`5000`, `5 thousand`, `5k`).
 - **Question variations are reserved for testing:** there is a bank of phrases that the model never sees during training, in order to measure whether it generalizes or simply repeats templates.
 
-## Project structure
-
-\`\`\`
-catalog-assistant/
-├── data/
-│   └── catalog_example.csv         # synthetic demonstration catalog
-├── src/
-│   ├── catalog.py                  # Sheet loading and cleaning, RAG documents
-│   ├── prompts.py                  # shared prompt format (train + production)
-│   └── dataset_builder.py          # fine-tuning dataset generator
-├── notebooks/
-│   ├── 01_catalog_rag.ipynb        # read the catalog and prepare it for RAG
-│   └── 02_dataset_finetuning.ipynb # build and validate the dataset
-├── requirements.txt
-└── README.md
-\`\`\`
 
 ## How to test it
 
